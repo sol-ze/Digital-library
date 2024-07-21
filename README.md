@@ -1,4 +1,5 @@
-**Digital library**
+Digital library
+===================================================
 Is an HTTP service with a RESTful API to manage a digital library of books. The service support basic CRUD operations to create, read, update and delete books in the library.
 
 ===================================================
