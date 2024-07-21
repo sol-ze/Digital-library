@@ -35,7 +35,6 @@ router.post("/", async (req, res, next) => {
 //GET /api/books/:isbn
 router.get("/:ISBN", async (req, res, next) => {
   try {
-    console.log("#########" + req.params);
     const validatedValue = await bookValidation.validateGetBookSchema(
       req.params
     );
