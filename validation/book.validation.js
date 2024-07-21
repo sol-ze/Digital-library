@@ -34,7 +34,7 @@ const updateBookSchema = Joi.object({
   author: Joi.string().max(255).optional().trim(),
   publisher: Joi.string().min(1).max(255).optional(),
   publication_date: Joi.date().iso().optional(),
-}).min(1);
+}).min(2);
 
 const authorSchema = Joi.object({
   author: Joi.string().min(1).max(255).optional(),

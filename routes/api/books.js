@@ -58,8 +58,6 @@ router.get("/", async (req, res, next) => {
     const query = req.query;
     const validatedValues = await bookValidation.validateAuthorSchema(query);
 
-    console.log(validatedValues);
-
     let books;
     if (validatedValues && validatedValues.author != null) {
       books = await bookModel.getBooksByAuthor(validatedValues.author);
@@ -81,8 +79,6 @@ router.put("/", async (req, res, next) => {
     const validatedValues = await bookValidation.validateUpdateBookSchema(
       req.body
     );
-
-    console.log(validatedValues);
 
     const book = await bookModel.findBookByISBN(validatedValues.ISBN);
 
